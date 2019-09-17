@@ -9,7 +9,7 @@
 
 .ld.reverse {
     -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+    animation-direction:alternate;
 }
 
 .ld.xhalf {
