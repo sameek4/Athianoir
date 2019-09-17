@@ -1,0 +1,160 @@
+﻿
+body {
+    background-color: #1C2121;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: 'Noto Serif', serif;
+}
+
+.TitleLogo1 {
+    height: 40px;
+}
+
+.videoWrapper {
+    position: relative;
+    height: 0;
+    z-index: -1;
+    margin-left: -10px;
+    margin-right: -10px;
+    text-align: center;
+    color: white;
+}
+
+
+
+.videoWrapper video
+{
+   object-fit: cover;
+   width: 100%;
+   height: 600px;
+}
+
+.OverlayText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    font-family: 'Noto Serif', serif;
+}
+
+.ImageCard {
+    z-index: 2;
+    width: 120%;
+    box-shadow: 2px 2px #111111;
+    border-radius: 8px;
+    -webkit-transition: transform 0.2s;
+}
+
+
+
+.card:hover .ImageCard {
+    transform: scale(1.01);
+}
+
+
+.ImageCardBackGround {
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background-color: #ff0000;
+    display: none;
+    opacity: 0;
+    top: 0;
+    border-radius: 8px;
+    z-index: 4;
+    -webkit-transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.card:hover  .ImageCardBackGround {
+    transform: scale(1.01);
+    display: block;
+    opacity: 0.2;
+}
+
+
+.ImageCardOverlay {
+    position: absolute;
+    text-align: center;
+    color: white;
+    z-index: 3;
+    cursor: pointer;
+    -webkit-user-select: none;
+    left:24%;
+    top:40%;
+
+}
+
+    .ImageCardOverlay .CardOverlayText1 {
+        font-size: 40px;
+        font-family: 'Josefin Sans', sans-serif;
+        text-shadow: 2px 2px black;
+
+    }
+
+
+    .ImageCardOverlay .CardOverlayText2 {
+        font-size: 26px;
+        font-family: 'Josefin Sans', sans-serif;
+        text-shadow: 1px 1px black;
+    }
+
+
+
+.card .ImageCardOverlay {
+    -webkit-transition: top 1s;
+}
+
+
+.card:hover .ImageCardOverlay {
+    top: 20%;
+}
+
+.ImageCardLinkOverlay {
+    position: absolute;
+    text-align: center;
+    left: 35%;
+    z-index: 4;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+    .ImageCardLinkOverlay h6 {
+        font-weight: bold;
+        font-size: 20px;
+        color: #c0c0c0;
+        margin-top:20px;
+    }
+
+    .ImageCardLinkOverlay h6:hover {
+        color: #ffffff;
+    }
+
+.card .ImageCardLinkOverlay {
+    opacity: 0;
+    top: 30%;
+}
+
+
+.card:hover .ImageCardLinkOverlay {
+    opacity: 1;
+    top: 40%;
+    -webkit-animation-name: ImageCardLinkAnimation;
+    -webkit-animation-duration: 1s;
+}
+
+
+@keyframes ImageCardLinkAnimation {
+    from {
+        opacity: 0;
+        top: 30%;
+    }
+
+    to {
+        opacity: 1;
+        top: 40%;
+    }
+}
+

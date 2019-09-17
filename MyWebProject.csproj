@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>MyWebProject</RootNamespace>
+    <ProjectGuid>{2869922B-16E6-4E26-8895-752578018435}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\MainPage.css" />
+    <Content Include="Content\scrolling-nav.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Images\ImageOverlay.png" />
+    <Content Include="Images\ThumbNails\DayNightCycle.png" />
+    <Content Include="Images\ThumbNails\FBXImport.png" />
+    <Content Include="Images\ThumbNails\FrameCapture.png" />
+    <Content Include="Images\ThumbNails\JigSawPuzzle.png" />
+    <Content Include="Images\ThumbNails\KeyBinding.png" />
+    <Content Include="Images\Logo_Light.png" />
+    <Content Include="Images\ThumbNails\MapSystem.png" />
+    <Content Include="Images\MinimapAndNavigationCover.png" />
+    <Content Include="Images\ThumbNails\MSSQL.png" />
+    <Content Include="Images\ThumbNails\MySQL.png" />
+    <Content Include="Images\ThumbNails\PostgreSQL.png" />
+    <Content Include="Images\ThumbNails\PostProcessBlendables.png" />
+    <Content Include="Images\ThumbNails\RadarSystem.png" />
+    <Content Include="Images\ThumbNails\TreeView.png" />
+    <Content Include="Scripts\scrolling-nav.js" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\Templates.js" />
+    <Content Include="Videos\AssetImport_Demo.mp4" />
+    <Content Include="Videos\FrameCaptureTutorial.mp4" />
+    <Content Include="Videos\ShowReel.mp4" />
+  </ItemGroup>
+</Project>
