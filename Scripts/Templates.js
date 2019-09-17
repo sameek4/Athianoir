@@ -1,4 +1,5 @@
 ﻿
+
 const FeaturedProducts = [
   { title: '<h6 class = "CardOverlayText2">Runtime</h6><h6  class = "CardOverlayText1">FBX Import</h6>', src: 'Images/ThumbNails/FBXImport.png' },
   { title: '<h6  class = "CardOverlayText1" style = "margin-left:-20%; margin-top:8%;">FrameCapture</h6>', src: 'Images/ThumbNails/FrameCapture.png' },
@@ -7,6 +8,8 @@ const FeaturedProducts = [
   { title: '<h6  class = "CardOverlayText1">MySQL</h6><h6 class = "CardOverlayText2">Integration</h6>', src: 'Images/ThumbNails/MySQL.png' },
   { title: '<h6  class = "CardOverlayText1">MSSQL</h6><h6 class = "CardOverlayText2">Integration</h6>', src: 'Images/ThumbNails/MSSQL.png' },
 ];
+
+
 
 let parentdiv = document.getElementById('FBXImportDiv');
 let template = document.getElementById('FeatureProducts');
@@ -30,7 +33,9 @@ document.onreadystatechange = function () {
         setTimeout(function () {
             document.getElementById('interactive');
             document.getElementById('loader').style.visibility = "hidden";
-            document.getElementById('contents').style.visibility = "visible";
+            document.getElementById('Contents').style.visibility = "visible";
         }, 1000);
     }
+
+
 }
