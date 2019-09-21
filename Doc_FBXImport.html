@@ -70,6 +70,9 @@
                     <a href='#CreatingCollisions'>Creating Collisions</a>
                     <a href='#ImportNotificationEvents'>Import Notification Events</a>
                 </li>
+                <li class="dropdown-btn"><a href="#UsingParameterizedMaterials">UsingParameterizedMaterials</a></li>
+                <li class="content">
+                </li>
             </ul>
         </div>
 
@@ -101,6 +104,189 @@
                 </div>
             </div>
 
+            <div id="ImportingFBXFiles">
+                <h5>Importing FBX Files</h5>
+                <p>
+                    The import process is a multi threaded or asynchronous operation. The FBX scene from the given file path is read as groups of Nodes,
+                    each node consisting of FBX mesh with several unique material sections. Each such section is generated as a Procedural Mesh Component
+                    that is then displayed in the Unreal Scene. Each section is a child of a particular node, as read from the original source file.
+                    So each Procedural Mesh Component has a NodeID as well as a SectionID.
+                </p>
+                <p>
+                    Since the process can take a while to fully load the entire FBX scene, depending on the complexity of the given FBX scene,
+                    we have custom events that get triggered during the import, and can be used to display custom notifications, or perform other
+                    tasks relevant to the Node being imported currently.
+                </p>
+
+                <div id="TheImportFunction">
+                    <h6>The Import Function</h6>
+                    <p>
+                        The function ImportFBXFile begins the asynchronous operation of a single FBX file, with the full filepath and the world location
+                        for the import, as input parameters. This function resides inside the FBXImportManager class.
+                    </p>
+                    <img src="Images/AssetImport/ImportFBX.jpg">
+                    <div class="FunctionsTable">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Input Parameter</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>FileName</td>
+                                    <td>FBX file name to be included, consisting of the name and extension of the file as well as full filepath.</td>
+                                </tr>
+                                <tr>
+                                    <td>Location</td>
+                                    <td>World Location where the meshes read from the given FBX file is generated procedurally.</td>
+                                </tr>
+                                <tr>
+                                    <td>Base Material</td>
+                                    <td>Default material to be applied on the generated procedural mesh.</td>
+                                </tr>
+                                <tr>
+                                    <td>Collision Type</td>
+                                    <td>If the generated mesh has no collision, or custom collision as read from the source file.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="TheOpenFileDialogue">
+                    <h6>The OpenFile Dialogue</h6>
+                    <p>
+                        When the function ImportFBXFile is called, we specify string FileName, which contains the fullpath,
+                        like "D:\Projects\FBX\Girl01.fbx". This can be constructed from the list of Blueprint exposed Path functions relative
+                        to the Project Directory, as shown below.
+                    </p>
+                    <img src="Images/AssetImport/ImportFBX.jpg">
+                    <p>
+                        However, if you want to manually choose one or multiple FBX files, you can call the function OpenFBXFileDialogue.
+                        This function brings the Windows default OpenFile Dialogue, with the Filetypes restricted to only FBX.
+                    </p>
+                    <img src="Images/AssetImport/OpenFBXFileDialogue.jpg">
+                    <div class="FunctionsTable">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Output Parameter</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>FileNames</td>
+                                    <td>The full FileNames (Name, extension and path information) of the files selected from the OpenFile Dialogue.</td>
+                                </tr>
+                                <tr>
+                                    <td>Return Value</td>
+                                    <td>True if FileNames are succesfully selected, False if the File Selection is cancelled.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="AddingMaterials">
+                    <h6>Adding Materials</h6>
+                    <p>
+                        An FBX mesh usually contains materials applied to them, divided into material sections with unique section indices.
+                        Each material section comprises of Materials developed in external 3d application, but contains common data like diffuse,
+                        opacity, normal, emissive and specular textures, diffuse color, etc. When an FBX mesh is imported, it also reads and
+                        imports the color and texture values from the corresponding source file. This values are set and applied in parameterized
+                        materials that we can add in our Procedural Mesh Component which are generated from the unique material sections of a given
+                        FBX mesh. So when we are calling the function ImportFBXFile, we can specify a default parameterized material that are going
+                        to auto apply in the generated mesh sections, with the textures and color values set, depending on the parameterization of
+                        the input material. We also have the option to update a particular mesh section with a specific material.
+                    </p>
+                </div>
+                <div id="CreatingCollisions">
+                    <h6>Creating Collisions</h6>
+                    <p>
+                        When the FBX file is being imported via the ImportFBXFile function, it can be chosen to either have no collisions,
+                        or collisions read from the source file, via the CollisionType input parameter.
+                    </p>
+                    <div class="FunctionsTable">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Collision Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>NoCollision</td>
+                                    <td>The currently Imported Meshes will not have any collisions applied on them.</td>
+                                </tr>
+                                <tr>
+                                    <td>MeshCollisionFromSource</td>
+                                    <td>Collision is only applied to the Procedural Mesh Components generated from the nodes having node name with prefix UCX_.</td>
+                                </tr>
+                                <tr>
+                                    <td>CustomCollisionFromSource</td>
+                                    <td>Only Collision data is generated from the nodes having node name with prefix UCX_ , and seperate mesh is not rendered.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        To create optimized collisions for your Procedural Mesh Components generated from the FBX Meshes, it is important
+                        to have simplified collision geometries. Of course we can have collisions derived from the imported Meshes itself,
+                        but for high poly meshes, it is going to be extremely performance heavy and not a recommended way to create collisions.
+                        So creating custom collision geometries within your 3d Modelling applications and exporting it with the render mesh is
+                        required for this plugin to create collision data for the generated Procedural Mesh Components.
+                    </p>
+                    <p>
+                        Collision meshes are identified by this plugin based on their names. The collision naming syntax should be UCX_[RenderMeshName].
+                    </p>
+                    <p>
+                        While importing, if you choose to have collision type as MeshCollisionFromSource, it means the geometries matching the naming pattern UCX_[RenderMeshName] will be imported as both render mesh and collision data. But choosing the collision type as CustomCollisionFromSource would rather implies that the geometries matching the naming pattern UCX_[RenderMeshName] will be imported as collision data only, and will not be rendered seperately.
+                    </p>
+                    <img src="Images/AssetImport/CustomCollision.jpg">
+                </div>
+                <div id="ImportNotificationEvents">
+                    <h6>Import Notification Events</h6>
+                    <p>
+                        Once the import process of a given FBX file is started, few events notifying the Import Manager of the import progress get
+                        triggered. These events need to be defined in the Import Manager Blueprint, and can be used to display custom notifications
+                        on screen, or perform other tasks, for example, displaying a dynamic Loading screen which disappears after all the FBX
+                        meshes are completely imported and corresponding mesh components have been generated in the current level.
+                    </p>
+                    <p>
+                        The event <strong>On New FBX Import Started</strong> is fired when a new FBX Import process has started.
+                    </p>
+                    <img src="Images/AssetImport/NewFBXImportStarted.jpg">
+                    <p>
+                        The event <strong>On FBX Node Progress Changed</strong> is fired when a new FBX Node has been Imported, with each individual
+                        sections of the Node has been generated into Procedural Mesh Components.
+                    </p>
+                    <img src="Images/AssetImport/FBXNodeProgressChanged.jpg">
+                    <p>
+                        The event <strong>On FBX Section Progress Changed</strong> is fired when a new FBX Section is imported and generated into a
+                        Procedural Mesh Component.
+                    </p>
+                    <img src="Images/AssetImport/FBXSectionProgressChanged.jpg">
+                    <p>
+                        The event <strong>On Import Completed</strong> is fired when athe current FBX Import process is completed.
+                    </p>
+                    <img src="Images/AssetImport/OnImportCompleted.jpg">
+                    <p>
+                        These events can be very useful to display custom Notifications via UMG Widgets.
+                    </p>
+                    <img src="Images/AssetImport/ImportNotification.jpg">
+                </div>
+
+            </div>
+
+            <div id="UsingParameterizedMaterials">
+                <h5>Using Parameterized Materials</h5>
+                <p>
+                    
+                </p>
+            </div>
 
         </div>
 
@@ -120,6 +306,7 @@
     <script src="Scripts/Documentation.js"></script>
     <script src="Scripts/MainPage.js"></script>
     <script src="Scripts/Loader.js"></script>
+    <script src="Scripts/SmoothScroll.js"></script>
 
 </body>
 </html>

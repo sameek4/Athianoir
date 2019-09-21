@@ -9,8 +9,9 @@
     padding-top: 100px;
     padding-left: 10px;
     border-right: 1px solid #818181;
-    border-right-width:1px;
-    border-right-style:groove;
+    border-right-width: 1px;
+    border-right-style: groove;
+    -webkit-transition: width 0.2s;
 }
 
     .sidenav a, .sidenav ul, .dropdown-btn {
@@ -26,6 +27,18 @@
         cursor: pointer;
         outline: none;
     }
+
+@media (max-width: 800px) {
+    .sidenav {
+        overflow: hidden;
+        text-overflow: clip;
+        width: 0px;
+        padding-left: 0px;
+        border-right-width: 0px;
+        -webkit-transition: width 0.2s;
+    }
+}
+
 
 .dropdown-btn {
     margin-left: -15px;

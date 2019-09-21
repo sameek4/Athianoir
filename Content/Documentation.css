@@ -8,6 +8,7 @@
 h1 {
     color: #ffffff;
     font-family: 'Noto Serif', serif;
+
 }
 
 h5
@@ -32,12 +33,19 @@ p
     padding-top:15px;
 }
 
+.FunctionsTable
+{
+    width:90%;
+    padding-top:10px;
+}
+
 .DocContainer {
     margin-right: auto;
     margin-left: auto;
     padding-left: 35%;
     padding-right: 20%;
     padding-top: 50px;
+    -webkit-transition: padding-left 0.2s;
 }
 
     .DocContainer img {
@@ -78,10 +86,16 @@ h1 {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     div {
         overflow: hidden;
         text-overflow:clip;
+
+    }
+
+    .DocContainer {
+        padding-left: 4%;
+        -webkit-transition: padding-left 0.2s;
     }
 
 }
