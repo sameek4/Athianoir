@@ -6,10 +6,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\Documentation.css" />
     <Content Include="Content\Loader.css" />
     <Content Include="Content\MainPage.css" />
     <Content Include="Content\scrolling-nav.css" />
+    <Content Include="Content\SideNav.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Doc_FBXImport.html" />
+    <Content Include="DocumentationTemplate.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -17,6 +21,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Images\ImageOverlay.png" />
+    <Content Include="Images\Logo.png" />
     <Content Include="Images\ThumbNails\DayNightCycle.png" />
     <Content Include="Images\ThumbNails\FBXImport.png" />
     <Content Include="Images\ThumbNails\FrameCapture.png" />
@@ -31,6 +36,9 @@
     <Content Include="Images\ThumbNails\PostProcessBlendables.png" />
     <Content Include="Images\ThumbNails\RadarSystem.png" />
     <Content Include="Images\ThumbNails\TreeView.png" />
+    <Content Include="Images\VRLogo.gif" />
+    <Content Include="Images\VRLogo.png" />
+    <Content Include="Scripts\Documentation.js" />
     <Content Include="Scripts\scrolling-nav.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />

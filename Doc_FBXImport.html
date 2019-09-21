@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="Content/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="Content/scrolling-nav.css" rel="stylesheet">
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/Loader.css" rel="stylesheet" />
+    <link href="Content/SideNav.css" rel="stylesheet">
+    <link href="Content/Documentation.css" rel="stylesheet">
+    <link href="Content/MainPage.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|PT+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Runtime FBX Import | Documentation</title>
+</head>
+
+<body id="page-top">
+
+    <div class="ld ld-breath ld.reverse" id="loader"></div>
+
+    <div id="Contents" style="visibility:hidden;">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="TitleLogo1" id="TitleLogo" src="Images/Logo_Light.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="">MarketPlace</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="">About Me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="sidenav" id="SideNavigationDiv">
+            <ul>
+                <li class="dropdown-btn"><a href="#GettingStarted">Getting Started</a></li>
+                <li class="content">
+                    <a href="#FBXImportManager">FBX Import Manager</a>
+                </li>
+                <li class="dropdown-btn"><a href="#ImportingFBXFiles">Importing FBX Files</a></li>
+                <li class="content">
+                    <a href="#TheImportFunction">The Import Function</a>
+                    <a href="#TheOpenFileDialogue">The Open File Dialogue</a>
+                    <a href='#AddingMaterials'>Adding Materials</a>
+                    <a href='#CreatingCollisions'>Creating Collisions</a>
+                    <a href='#ImportNotificationEvents'>Import Notification Events</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="DocContainer">
+            <h1>Runtime FBX Import Documentation</h1>
+            <p>
+                This documentation covers details of how to integrate this plugin in your own project.
+                By the end of this documentation you should be able to have a better understanding of importing custom FBX meshes from hard drive
+                during gameplay in your unreal project, and triggering notifications or perform other tasks while the import is in progress,
+                as the process is asynchronous. You will also have a clear understanding of updaing material properties for individual sections.
+            </p>
+
+            <div id="GettingStarted">
+                <h5>Getting Started</h5>
+                <p>
+                    Once you have installed the plugin from the launcher, ensure that the plugin is enabled by visiting the plugin window and browsing over
+                    to the RuntimeFBXImport plugin.
+                </p>
+                <img src="Images/AssetImport/PluginWindow.jpg">
+
+                <div id="FBXImportManager">
+                    <h6>The FBX Import Manager</h6>
+                    <p>
+                        The FBXImportManager Actor class is responsible for handling the import of FBX files and generatation of Procedural Mesh Components
+                        from the imported FBX scenes. A child Blueprint derived from the FBXImportManager, found in the Blueprints folder of the plugin
+                        Content directory, has been created as an example and can be used to quickly start implementing this plugin in your projects.
+                        You must place an instance of the FBXImportManager in your level, before you can begin importing your files.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <footer class="bg-dark">
+        <div>
+            <p class="text-center text-white">Copyright &copy; Your Website 2019</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <script src="Scripts/scrolling-nav.js"></script>
+    <script src="Scripts/Documentation.js"></script>
+    <script src="Scripts/MainPage.js"></script>
+    <script src="Scripts/Loader.js"></script>
+
+</body>
+</html>
+

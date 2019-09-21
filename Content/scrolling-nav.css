@@ -17,3 +17,11 @@ header {
 section {
   padding: 150px 0;
 }
+
+footer {
+    clear: both;
+    position: relative;
+    height: 60px;
+    margin-top: 400%;
+    padding:20px;
+}
