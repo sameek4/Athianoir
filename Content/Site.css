@@ -29,3 +29,19 @@ textarea {
         padding: 0;
     }
 }
+
+
+.Footer {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 35%;
+    padding-right: 20%;
+    width: 100%;
+    border-style: ridge;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-color: rgba(128, 128, 128, 0.3);
+    text-align: center;
+    padding: 1px;
+    color: #ffffff;
+}

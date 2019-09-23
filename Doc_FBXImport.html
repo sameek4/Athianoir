@@ -19,42 +19,24 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Noto+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|PT+Sans&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Runtime FBX Import | Documentation</title>
+
 </head>
 
 <body id="page-top">
 
-    <div class="ld ld-breath ld.reverse" id="loader"></div>
+    <div class="ld ld-breath ld.reverse" id="loader">
+    </div>
 
     <div id="Contents" style="visibility:hidden;">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="TitleLogo1" id="TitleLogo" src="Images/Logo_Light.png"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="">MarketPlace</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="">About Me</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <?php include "Header.php";?>
 
         <div class="sidenav" id="SideNavigationDiv">
             <ul>
@@ -78,11 +60,13 @@
 
         <div class="DocContainer">
             <h1>Runtime FBX Import Documentation</h1>
+            <?php include 'Header.php';?>
+
             <p>
                 This documentation covers details of how to integrate this plugin in your own project.
                 By the end of this documentation you should be able to have a better understanding of importing custom FBX meshes from hard drive
                 during gameplay in your unreal project, and triggering notifications or perform other tasks while the import is in progress,
-                as the process is asynchronous. You will also have a clear understanding of updaing material properties for individual sections.
+                as the process is asynchronous. You will also have a clear understanding of updating material properties for individual sections.
             </p>
 
             <div id="GettingStarted">
@@ -284,20 +268,21 @@
             <div id="UsingParameterizedMaterials">
                 <h5>Using Parameterized Materials</h5>
                 <p>
-                    
+                    To read the textures from the imported FBX files and apply at respective sections of the Procedural Mesh Component, it is
+                    important to create parameterized materials, following a specific naming convention for the paramters, so that while the
+                    respective FBX section is converted into a Procedural Mesh Component, a dynamic material is created and corresponding textures
+                    can be set in the property values that match the given naming convention.
                 </p>
             </div>
 
         </div>
 
-    </div>
-
-    <footer class="bg-dark">
-        <div>
-            <p class="text-center text-white">Copyright &copy; Your Website 2019</p>
+        <div class="Footer">
+            <p>&copy; 2018-2019, Athian Games, Inc. All rights reserved.</p>
         </div>
-    </footer>
 
+    </div>
+    
     <!-- Bootstrap core JavaScript -->
     <script src="Scripts/jquery-3.3.1.js"></script>
     <script src="Scripts/bootstrap.js"></script>
@@ -305,7 +290,7 @@
     <script src="Scripts/scrolling-nav.js"></script>
     <script src="Scripts/Documentation.js"></script>
     <script src="Scripts/MainPage.js"></script>
-    <script src="Scripts/Loader.js"></script>
+    <script src="Scripts/CommonTemplate.js"></script>
     <script src="Scripts/SmoothScroll.js"></script>
 
 </body>

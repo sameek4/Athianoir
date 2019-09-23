@@ -5,6 +5,7 @@
     <ProjectGuid>{2869922B-16E6-4E26-8895-752578018435}</ProjectGuid>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="CommonTemplate.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\Documentation.css" />
     <Content Include="Content\Loader.css" />
@@ -12,8 +13,66 @@
     <Content Include="Content\scrolling-nav.css" />
     <Content Include="Content\SideNav.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\AssetImport\AssetImportCover.jpg" />
+    <Content Include="Images\AssetImport\AssetImportMiniCover.jpg" />
+    <Content Include="Images\AssetImport\CustomCollision.jpg" />
+    <Content Include="Images\AssetImport\FBXIcon.png" />
+    <Content Include="Images\AssetImport\FBXNodeProgressChanged.jpg" />
+    <Content Include="Images\AssetImport\FBXSectionProgressChanged.jpg" />
+    <Content Include="Images\AssetImport\ImportFBX.jpg" />
+    <Content Include="Images\AssetImport\ImportNotification.jpg" />
+    <Content Include="Images\AssetImport\NewFBXImportStarted.jpg" />
+    <Content Include="Images\AssetImport\OnImportCompleted.jpg" />
+    <Content Include="Images\AssetImport\OpenFBXFileDialogue.jpg" />
+    <Content Include="Images\AssetImport\PluginWindow.jpg" />
+    <Content Include="Images\AssetImport\ProjectPathsDropDown.jpg" />
+    <Content Include="Images\IMaps\CentricalPlayer1.png" />
+    <Content Include="Images\IMaps\MapBoundsActor.png" />
+    <Content Include="Images\IMaps\MapElementWidget.png" />
+    <Content Include="Images\IMaps\MapManager.png" />
+    <Content Include="Images\IMaps\MapWidget.png" />
+    <Content Include="Images\IMaps\MinimapActorComponent1.png" />
+    <Content Include="Images\IMaps\MinimapActorComponent2.png" />
+    <Content Include="Images\IMaps\MinimapActorComponent3.png" />
+    <Content Include="Images\IMaps\MinimapActorComponent4.png" />
+    <Content Include="Images\IMaps\MinimapAndNavigationCover.png" />
+    <Content Include="Images\IMaps\MinimapElementWidget.png" />
+    <Content Include="Images\IMaps\MinimapMasking1.png" />
+    <Content Include="Images\IMaps\MinimapMasking2.png" />
+    <Content Include="Images\IMaps\MinimapWidget.png" />
+    <Content Include="Images\IMaps\PluginStructure.png" />
+    <Content Include="Images\IMaps\PluginWindow.png" />
+    <Content Include="Images\IMaps\POIElementTable.png" />
+    <Content Include="Images\IMaps\QuickStart_DemoMap.png" />
+    <Content Include="Images\IMaps\QuickStart_Map1.png" />
+    <Content Include="Images\IMaps\QuickStart_Map2.png" />
+    <Content Include="Images\IMaps\QuickStart_Map3.png" />
+    <Content Include="Images\IMaps\QuickStart_Map4.png" />
+    <Content Include="Images\IMaps\QuickStart_Map5.png" />
+    <Content Include="Images\IMaps\QuickStart_MapBoundsActors.png" />
+    <Content Include="Images\IMaps\QuickStart_MapBoundsActors2.png" />
+    <Content Include="Images\IMaps\QuickStart_MapBoundsActors3.png" />
+    <Content Include="Images\IMaps\QuickStart_MapElement1.png" />
+    <Content Include="Images\IMaps\QuickStart_MapElement2.png" />
+    <Content Include="Images\IMaps\QuickStart_MapElement3.png" />
+    <Content Include="Images\IMaps\QuickStart_MapManager1.png" />
+    <Content Include="Images\IMaps\QuickStart_MapManager2.png" />
+    <Content Include="Images\IMaps\QuickStart_Minimap1.png" />
+    <Content Include="Images\IMaps\QuickStart_Minimap2.png" />
+    <Content Include="Images\IMaps\QuickStart_MinimapElement1.png" />
+    <Content Include="Images\IMaps\QuickStart_MinimapElement2.png" />
+    <Content Include="Images\IMaps\QuickStart_Navigation1.png" />
+    <Content Include="Images\IMaps\QuickStart_Navigation2.png" />
+    <Content Include="Images\IMaps\QuickStart_Navigation3.png" />
+    <Content Include="Images\IMaps\QuickStart_Navigation4.png" />
+    <Content Include="Images\IMaps\QuickStart_Navigation5.png" />
+    <Content Include="Images\IMaps\QuickStart_Navigation6.png" />
+    <Content Include="Images\IMaps\QuickStart_Navigation7.png" />
+    <Content Include="Images\IMaps\QuickStart_POIElement1.png" />
+    <Content Include="Images\IMaps\Runtime_AddMapActor.PNG" />
+    <Content Include="Images\IMaps\Runtime_RemoveMapActor.PNG" />
+    <Content Include="Images\RememberIcon.png" />
     <Content Include="Doc_FBXImport.html" />
-    <Content Include="DocumentationTemplate.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -38,12 +97,17 @@
     <Content Include="Images\ThumbNails\TreeView.png" />
     <Content Include="Images\VRLogo.gif" />
     <Content Include="Images\VRLogo.png" />
+    <Content Include="Scripts\CommonTemplate.js" />
     <Content Include="Scripts\Documentation.js" />
     <Content Include="Scripts\scrolling-nav.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\Templates.js" />
+    <Content Include="Scripts\SmoothScroll.js" />
+    <Content Include="Scripts\MainPage.js" />
     <Content Include="Videos\ShowReel.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\IMaps\DemoLayer.psd" />
   </ItemGroup>
 </Project>
