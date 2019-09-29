@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="Content/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="Content/scrolling-nav.css" rel="stylesheet">
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/Loader.css" rel="stylesheet" />
+    <link href="Content/MainPage.css" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="ld ld-breath ld.reverse" id="loader">
+    </div>
+    <div id="Contents" style="visibility:hidden;">
+
+        <div id="HeaderNavDiv">
+            <!--HeaderNav-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+                <div class="container">
+                    <a class="navbar-brand js-scroll-trigger" href="index.html"><img class="TitleLogo1" id="TitleLogo" src="Images/Logo_Light.png"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    MarketPlace
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="MeshImport.html">Runtime Mesh Import</a>
+                                    <a class="dropdown-item" href="MinimapSystem.html">Minimap System</a>
+                                    <a class="dropdown-item" href="DataBaseIntegration.html">DataBase Integration</a>
+                                    <a class="dropdown-item" href="FrameCapture.html">FrameCapture</a>
+                                    <a class="dropdown-item" href="PostProcessBlendables.html">Post Process Blendables</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Miscellaneous</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="">About Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--End HeaderNav-->
+        </div>
+
+        <div class="ImageWrapper">
+            <img src="Images/AssetImport/FBXImportCover.png">
+            <div class="OverlayText ProductTitle">
+                <h1>Runtime FBX Import </h1>
+                <h2>for Unreal Engine 4</h2>
+                <p>
+                    Asynchronously Import FBX files in your Unreal projects, in runtime. Highly detailed FBX scenes can be
+                    loaded very fast, and grouping of a single file into Nodes and Material sections further allows you to generate an
+                    entire scene comprising of various interactive actors, from a single FBX file.
+                </p>
+                <button type="button">Get It Here</button>
+                <button type="button">Documentation</button>
+                <button type="button">Join Discord</button>
+            </div>
+        </div>
+
+        <div class="SectionDiv" style="margin-top:40%;">
+            <div class="row">
+                <div class="col-sm-4"><h1>FEATURES</h1></div>
+            </div>
+            <div class="row">
+                <div class="SectionContent">
+                    <h2>1. Asynchronously Import FBX files in runtime.</h2>
+                    <h2>
+                        2. Relevant Textures(Diffuse, Normal, Specular, Opacity) are auto imported with the mesh and can be applied to the generated Procedural Mesh Components, each unique to a material index and is a child of a specific node, as read from the source file .
+                    </h2>
+                    <h2>
+                        3. Custom collisions can be applied in the generated mesh component via UCX_ prefix as read from the source file.
+                    </h2>
+                    <h2>
+                        4. Built in support for designing changeable material property layout for every Mesh Component.
+                    </h2>
+                    <h2>
+                        5. Every FBX scene imported is represented by a custom actor which hosts all the Procedural Mesh Components generated from the nodes read from the source file. Hence every FBX scene can have its own set of custom logic, allowing user to implement this plugin in number of various scenarios, from importing larger scenes, to interactive smaller props like weapons , barrels, etc.
+                    </h2>
+                    <h2>
+                        6. Load and Save System implemented for storing the Imported FBX Meshes in desired location in
+                        hard drive, and loading it without importing it all over again, in the next session.
+                    </h2>
+                </div>
+
+                <div class="col-sm-4" style="padding:20px;">
+                    <a class="FeaturedVideo" id="PlayFeaturedVideo" href="#">
+                    <img width="800" src="Images/AssetImport/FBXVideoThumbnail.png" /></a>
+                    <iframe id="FeaturedVideoFrame" width="800" height="450" style="display:none;"
+                            src="https://www.youtube.com/embed/qrB7rDunSrM?rel=0&enablejsapi=1&origin='https://www.athiangames.com'" frameborder="0"
+                            allowfullscreen></iframe>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="Footer">
+            <p>&copy; 2018-2019, Athian Games OPC Pvt Ltd. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/ProductTemplate.js"></script>
+
+    <script src="Scripts/scrolling-nav.js"></script>
+    <script src="Scripts/MainPage.js"></script>
+    <script src="Scripts/CommonTemplate.js"></script>
+
+
+</body>
+</html>

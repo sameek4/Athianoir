@@ -5,7 +5,6 @@
     <ProjectGuid>{2869922B-16E6-4E26-8895-752578018435}</ProjectGuid>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="CommonTemplate.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\Documentation.css" />
     <Content Include="Content\Loader.css" />
@@ -13,12 +12,16 @@
     <Content Include="Content\scrolling-nav.css" />
     <Content Include="Content\SideNav.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Header.php" />
+    <Content Include="HTMLPage1.html" />
     <Content Include="Images\AssetImport\AssetImportCover.jpg" />
     <Content Include="Images\AssetImport\AssetImportMiniCover.jpg" />
     <Content Include="Images\AssetImport\CustomCollision.jpg" />
     <Content Include="Images\AssetImport\FBXIcon.png" />
+    <Content Include="Images\AssetImport\FBXImportCover.png" />
     <Content Include="Images\AssetImport\FBXNodeProgressChanged.jpg" />
     <Content Include="Images\AssetImport\FBXSectionProgressChanged.jpg" />
+    <Content Include="Images\AssetImport\FBXVideoThumbnail.png" />
     <Content Include="Images\AssetImport\ImportFBX.jpg" />
     <Content Include="Images\AssetImport\ImportNotification.jpg" />
     <Content Include="Images\AssetImport\NewFBXImportStarted.jpg" />
@@ -97,8 +100,10 @@
     <Content Include="Images\ThumbNails\TreeView.png" />
     <Content Include="Images\VRLogo.gif" />
     <Content Include="Images\VRLogo.png" />
+    <Content Include="ProductTemplate.html" />
     <Content Include="Scripts\CommonTemplate.js" />
     <Content Include="Scripts\Documentation.js" />
+    <Content Include="Scripts\ProductTemplate.js" />
     <Content Include="Scripts\scrolling-nav.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
@@ -109,5 +114,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\IMaps\DemoLayer.psd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.11.12.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>packages\HtmlAgilityPack.1.11.12\lib\Net40\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
 </Project>

@@ -5,13 +5,12 @@ const FeaturedProducts = [
   { title: '<h6  class = "CardOverlayText1" style = "margin-left:-20%; margin-top:8%;">FrameCapture</h6>', src: 'Images/ThumbNails/FrameCapture.png' },
   { title: '<h6  class = "CardOverlayText2">Post Process</h6><h6 class = "CardOverlayText1">Blendables</h6>', src: 'Images/ThumbNails/PostProcessBlendables.png' },
   { title: '<h6  class = "CardOverlayText2" style = "margin-left:-6%;">Minimap, Map and</h6><h6 class = "CardOverlayText1" style = "margin-left:-6%;"> Navigation</h6>', src: 'Images/ThumbNails/MapSystem.png' },
-  { title: '<h6  class = "CardOverlayText1">MySQL</h6><h6 class = "CardOverlayText2">Integration</h6>', src: 'Images/ThumbNails/MySQL.png' },
-  { title: '<h6  class = "CardOverlayText1">MSSQL</h6><h6 class = "CardOverlayText2">Integration</h6>', src: 'Images/ThumbNails/MSSQL.png' },
+  { title: '<h6  class = "CardOverlayText1" style = "margin-left:10px;">MySQL</h6><h6 class = "CardOverlayText2" style = "margin-left:-20px; margin-right:-20px;">Integration for Unreal</h6>', src: 'Images/ThumbNails/MySQL.png' },
 ];
 
 
 
-let parentdiv = document.getElementById('FBXImportDiv');
+let parentdiv = document.getElementById('FeatureProductsDiv');
 let template = document.getElementById('FeatureProducts');
 
 FeaturedProducts.forEach(Products => {

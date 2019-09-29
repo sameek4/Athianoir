@@ -27,42 +27,47 @@
 
 <body id="page-top">
 
-    <!-- Navigation -->
     <div class="ld ld-breath ld.reverse" id="loader">
     </div>
     <div id="Contents" style="visibility:hidden;">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="TitleLogo1" id="TitleLogo" src="Images/Logo_Light.png"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                MarketPlace
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Runtime Mesh Import</a>
-                                <a class="dropdown-item" href="#">Minimap System</a>
-                                <a class="dropdown-item" href="#">DataBase Integration</a>
-                                <a class="dropdown-item" href="#">FrameCapture</a>
-                                <a class="dropdown-item" href="#">Post Process Blendables</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Miscellaneous</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="">About Me</a>
-                        </li>
-                    </ul>
-                </div>
+        
+        <div id="HeaderNavDiv">
+    <!--HeaderNav-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="index.html"><img class="TitleLogo1" id="TitleLogo" src="Images/Logo_Light.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            MarketPlace
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="MeshImport.html">Runtime Mesh Import</a>
+                            <a class="dropdown-item" href="MinimapSystem.html">Minimap System</a>
+                            <a class="dropdown-item" href="DataBaseIntegration.html">DataBase Integration</a>
+                            <a class="dropdown-item" href="FrameCapture.html">FrameCapture</a>
+                            <a class="dropdown-item" href="PostProcessBlendables.html">Post Process Blendables</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Miscellaneous</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="">About Me</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <!--End HeaderNav-->
+        </div>       
+        
         <div class="videoWrapper">
             <video autoplay loop muted>
                 <source id="mp4" src="Videos/ShowReel.mp4" type="video/mp4">
@@ -73,8 +78,8 @@
         </div>
 
         <template id="FeatureProducts">
-            <div class="col-sm-2">
-                <div class="card" style="width: 18rem;">
+            <div class="ImageCardDiv">
+                <div class="card">
                     <img class="ImageCard" id="ThumbnailImage">
                     <div class="ImageCardOverlay">
                         <span class="title"></span>
@@ -93,16 +98,15 @@
         </template>
 
 
-        <div class="container my-4" style="padding-top:700px;">
-            <div class="row">
-                <h1>FEATURED PRODUCTS</h1>
-            </div>
-            <div class="row" id="FBXImportDiv">
+        <div class="ImageCardContainer" style="padding-top:700px;">
+            <h1>FEATURED PRODUCTS</h1>
+            <div class="row" id="FeatureProductsDiv">
             </div>
         </div>
 
+
         <div class="Footer">
-            <p>&copy; 2018-2019, Athian Games, Inc. All rights reserved.</p>
+            <p>&copy; 2018-2019, Athian Games OPC Pvt Ltd. All rights reserved.</p>
         </div>
     </div>
 
