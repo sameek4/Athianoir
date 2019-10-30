@@ -1,0 +1,354 @@
+﻿
+.FeaturedVideo
+{
+
+}
+
+    .FeaturedVideo:hover
+    {
+        cursor:pointer;
+    }
+
+    .FeaturedVideo:target
+    {
+        display:none;
+    }
+
+.ImageWrapper {
+    position: relative;
+    height: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+    text-align: center;
+    color: white;
+    -webkit-transition: height 0.1s;
+}
+
+    .ImageWrapper img {
+        object-fit: cover;
+        width: 100%;
+        height:600px;
+        margin-top: 10px;
+        -webkit-transition: height 0.5s;
+    }
+
+
+
+.ProductTitle h1
+{
+    font-size:50px;
+}
+
+.ProductTitle button {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #788cb0;
+    border: 1px solid #aed7f5;
+    min-width: 150px;
+    padding: 10px;
+    margin: 2px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+    .ProductTitle button:hover {
+        color: #212529;
+        text-decoration: none;
+        cursor: pointer;
+        background-color: #258299;
+        border: 1px solid #20353b;
+    }
+
+    .ProductTitle button:focus, .btn.focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+
+.ProductTitle p {
+    padding-top: 50px;
+    -webkit-transition: padding-top 0.1s;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1600px) {
+    .ProductTitle h1 {
+        font-size: 40px;
+    }
+    
+    .ProductTitle p {
+        padding-top: 30px;
+        -webkit-transition: margin 0.1s;
+    }
+
+
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1200px) {
+
+
+    .ProductTitle button {
+        min-width: 150px;
+        margin:4px;
+    }
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1100px) {
+
+
+    .ProductTitle p {
+        font-size: 16px;
+    }
+
+    .ImageWrapper img {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .ProductTitle h1 {
+        font-size: 30px;
+    }
+
+    .ProductTitle h2 {
+        font-size: 24px;
+    }
+
+    .ProductTitle p {
+        margin-left: -30px;
+        margin-right: -50px;
+    }
+
+    .ImageWrapper img {
+        height: 500px;
+    }
+
+}
+
+.SectionDivRow {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    margin-left: -35px;
+}
+
+    .SectionDivRow h1 {
+        padding-left: 15%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        width: 100%;
+        margin-left: 100px;
+        margin-right: 80px;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+
+.SectionDiv {
+    position: relative;
+    margin-top: 700px;
+    -webkit-transition: padding-left 0.2s;
+    -webkit-transition: margin-top 0.2s;
+    -webkit-transition: margin-left 0.2s;
+}
+
+    .SectionDiv h1 {
+        color: white;
+        -webkit-transition: font 0.2s;
+    }
+
+    .SectionDiv h2 {
+        color: white;
+        font-size: 18px;
+        margin-left: 50%;
+        padding: 10px;
+        -webkit-transition: font 0.2s;
+    }
+
+    .SectionDiv iframe {
+        box-shadow: 4px 2px rgba(10, 10, 10, 0.25);
+    }
+
+
+
+.SectionContent {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 60%;
+    max-width: 90%;
+    margin-left: -10%;
+}
+
+.FeaturedVideoDiv {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 80px;
+    padding-left: 20px;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+    .FeaturedVideoDiv img, .FeaturedVideoDiv video {
+        -webkit-transition: width 0.2s;
+        -webkit-transition: margin-left 0.2s;
+    }
+
+@media screen and (max-width: 500px) {
+    .ImageWrapper img {
+        height: 650px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+
+    .SectionDiv {
+        margin-top: 600px;
+        margin-left: -10%;
+    }
+
+    .FeaturedVideoDiv img, .FeaturedVideoDiv video {
+        width: 700px;
+    }
+}
+
+
+@media screen and (max-width: 1800px) {
+
+    .SectionDiv {
+        margin-top: 600px;
+        margin-left: -15%;
+    }
+
+    .FeaturedVideoDiv img, .FeaturedVideoDiv video {
+        width: 700px;
+    }
+}
+
+
+@media screen and (max-width: 1600px) {
+    .SectionDiv {
+        margin-top: 600px;
+        margin-left: -20%;
+        
+    }
+        .SectionDiv h1{
+            font-size:32px;
+        }
+
+        .SectionDiv h2 {
+            font-size: 16px;
+        }
+
+
+    .FeaturedVideoDiv img, .FeaturedVideoDiv video {
+        width: 660px;
+        margin-left: -15%;
+        margin-top: 40px;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .SectionDiv {
+        margin-top: 600px;
+        margin-left: -20%;
+    }
+
+    .FeaturedVideoDiv img, .FeaturedVideoDiv video {
+        width: 200%;
+        margin-left: 60%;
+        object-fit: cover;
+    }
+
+    .SectionDivRow {
+        display: block;
+        margin-right: 0px;
+    }
+
+    .SectionContent {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 80%;
+        max-width: 190%;
+        margin-left: -50%;
+    }
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .SectionDiv {
+        margin-top: 450px;
+        margin-left: -20%;
+    }
+
+    .FeaturedVideoDiv img, .FeaturedVideoDiv video {
+        margin-left: 50%;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .SectionDiv {
+        margin-top: 550px;
+        margin-left: -10%;
+    }
+
+    .FeaturedVideoDiv img, .FeaturedVideoDiv video {
+        margin-left: 30%;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .SectionDiv {
+        margin-top: 650px;
+    }
+
+    .FeaturedVideoDiv img, .FeaturedVideoDiv video {
+        margin-left: 20%;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .FeaturedVideoDiv img, .FeaturedVideoDiv video {
+        margin-left: -10%;
+        width: 240%;
+    }
+}
+
+
+
+

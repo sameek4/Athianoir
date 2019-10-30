@@ -29,37 +29,6 @@ h1 {
     }
 
 
-.FeaturedVideo
-{
-
-}
-
-    .FeaturedVideo:hover
-    {
-        cursor:pointer;
-    }
-
-    .FeaturedVideo:target
-    {
-        display:none;
-    }
-
-    .ImageWrapper {
-        position: relative;
-        height: 0;
-        margin-left: -10px;
-        margin-right: -10px;
-        text-align: center;
-        color: white;
-    }
-
-    .ImageWrapper img {
-        object-fit: cover;
-        width: 100%;
-        height:auto;
-        margin-top: 10px;
-        -webkit-transition: height 0.5s;
-    }
 
 
 
@@ -72,62 +41,9 @@ h1 {
     -webkit-transition: left 0.1s;
 }
 
-.ProductTitle h1
-{
-    font-size:50px;
-}
-
-.ProductTitle button {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #788cb0;
-    border: 1px solid #aed7f5;
-    min-width: 150px;
-    padding: 10px;
-    margin: 2px;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-    .ProductTitle button:hover {
-        color: #212529;
-        text-decoration: none;
-        cursor: pointer;
-        background-color: #258299;
-        border: 1px solid #20353b;
-    }
-
-    .ProductTitle button:focus, .btn.focus {
-        outline: 0;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    }
-
-
-.ProductTitle p {
-    padding-top: 50px;
-    -webkit-transition: padding-top 0.1s;
-}
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1600px) {
-    .ProductTitle h1 {
-        font-size: 40px;
-    }
-    
-    .ProductTitle p {
-        padding-top: 30px;
-        -webkit-transition: margin 0.1s;
-    }
-
 
     .OverlayText {
         transform: translate(-50%, 30%);
@@ -143,10 +59,6 @@ h1 {
         left: 40%;
     }
 
-    .ProductTitle button {
-        min-width: 150px;
-        margin:4px;
-    }
 }
 
 
@@ -158,9 +70,6 @@ h1 {
         font-size: 16px;
     }
 
-    .ImageWrapper img {
-        height: 400px;
-    }
 }
 
 @media screen and (max-width: 800px) {
@@ -175,120 +84,31 @@ h1 {
 
 @media screen and (max-width: 600px) {
 
-
-    .ProductTitle h1 {
-        font-size: 30px;
-    }
-
-    .ProductTitle h2 {
-        font-size: 24px;
-    }
-
     .OverlayText {
         left: 40%;
         transform: translate(-40%, 10%);
     }
 
-    .ProductTitle p {
-        margin-left: -30px;
-        margin-right: -50px;
-    }
-
-    .ImageWrapper img {
-        height: 500px;
-    }
-
-}
-
-.SectionDiv {
-    position: relative;
-    -webkit-transition: padding-left 0.2s;
-}
-
-.SectionDiv h1 {
-   color:white;
-}
-
-    .SectionDiv h2 {
-        color: white;
-        font-size:18px;
-        margin-left:50%;
-        padding:10px;
-    }
-
-    .SectionDiv iframe {
-        box-shadow: 4px 2px rgba(10, 10, 10, 0.25);
-    }
-
-
-.SectionContent {
-    -ms-flex: 0 0 20%;
-    flex: 0 0 60%;
-    max-width: 90%;
-    margin-left: -10%;
-}
-
-@media screen and (max-width: 500px) {
-    .ImageWrapper img {
-        height: 650px;
-    }
 }
 
 
-
-
-.ImageCard {
-    z-index: 2;
-    width: 120%;
-    box-shadow: 2px 2px #111111;
-    border-radius: 8px;
-    -webkit-transition: transform 0.2s;
-}
-
-.card {
-    width: 18rem;
-}
-
-.card:hover .ImageCard {
-    transform: scale(1.01);
-}
-
-
-.ImageCardBackGround {
-    position: absolute;
-    width: 120%;
-    height: 100%;
-    background-color: #ff0000;
-    display: none;
-    opacity: 0;
-    top: 0;
-    border-radius: 8px;
-    z-index: 4;
-    -webkit-transition: transform 0.2s;
-    cursor: pointer;
-}
-
-.card:hover  .ImageCardBackGround {
-    transform: scale(1.01);
-    display: block;
-    opacity: 0.2;
-}
 
 
 .ImageCardOverlay {
-    position: absolute;
+    position:relative;
+    display:block;
     text-align: center;
     color: white;
     z-index: 3;
     cursor: pointer;
     -webkit-user-select: none;
-    left:24%;
-    top:40%;
+    left:-1%;
+    top:-60%;
 
 }
 
     .ImageCardOverlay .CardOverlayText1 {
-        font-size: 40px;
+        font-size: 37px;
         font-family: 'Josefin Sans', sans-serif;
         text-shadow: 2px 2px black;
 
@@ -303,33 +123,40 @@ h1 {
 
 
 
-.card .ImageCardOverlay {
-    -webkit-transition: top 1s;
-}
-
-
-.card:hover .ImageCardOverlay {
-    top: 20%;
-}
 
 
 .ImageCardLinkOverlay {
-    position: absolute;
+    position: relative;
     text-align: center;
-    left: 35%;
+    left: -1%;
     z-index: 4;
     cursor: pointer;
     -webkit-user-select: none;
 }
 
+    .ImageCardLinkOverlay h6 {
+        font-weight: bold;
+        font-size: 20px;
+        color: #c0c0c0;
+        margin-top: 20px;
+    }
+
+
+
+.ImageCardLinkOverlay h6:hover {
+    color: #ffffff;
+}
+
+
+
 .ImageCardContainer {
-    padding-left: 10%;
-    margin: 1%;
+    padding-left: 1%;
     -webkit-transition: padding-left 0.2s;
 }
     .ImageCardContainer h1 {
-        padding-left: 35%;
-        -webkit-transition: padding-left 0.2s;
+        display: flex;
+        margin-left: 40%;
+        -webkit-transition: margin-left 0.2s;
         -webkit-transition: font-size 0.2s;
     }
 
@@ -344,94 +171,253 @@ h1 {
 
 @media (max-width: 2400px) {
     .ImageCardDiv {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 6%;
     }
 
 }
 
-@media (max-width: 1000px) {
-    .ImageCardContainer {
-        padding-left: 3%;
-    }
-
-        .ImageCardContainer h1 {
-            padding-left: 20%;
-        }
-}
 
 
-    @media (max-width: 600px) {
-        .ImageCardContainer h1 {
-            padding-left: 25%;
-            font-size: 32px;
-            -webkit-transition: font-size 0.2s;
-        }
-    }
 
-    .ImageCardLinkOverlay h6 {
-        font-weight: bold;
-        font-size: 20px;
-        color: #c0c0c0;
-        margin-top: 20px;
-    }
 
-        .ImageCardLinkOverlay h6:hover {
-            color: #ffffff;
-        }
-
-    .card .ImageCardLinkOverlay {
+@keyframes ImageCardLinkAnimation {
+    from {
         opacity: 0;
-        top: 30%;
     }
 
-
-    .card:hover .ImageCardLinkOverlay {
+    to {
         opacity: 1;
-        top: 40%;
-        -webkit-animation-name: ImageCardLinkAnimation;
-        -webkit-animation-duration: 1s;
     }
 
+}
 
-    @keyframes ImageCardLinkAnimation {
-        from {
-            opacity: 0;
-            top: 30%;
-        }
-
-        to {
-            opacity: 1;
-            top: 40%;
-        }
+@keyframes ImageCardLinkAnimationReverse {
+    from {
+        opacity: 1;
     }
 
+    to {
+        opacity: 0;
+    }
+}
 
+
+
+.ImageCardRow {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 4px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 200px;
+}
 
 /* Create four equal columns that sits next to each other */
-.Responsivecolumn {
-    max-width: 25%;
-    padding:1px;
+.ImageCardColumn {
+    flex: 30%;
+    max-width: 35%;
+    padding: 0 4px;
 }
 
-    .Responsivecolumn img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 60%;
+
+
+    .ImageCardColumn .ImageCard {
+        margin-top: -170px;
+        width: 90%;
+        z-index: -4;
+        box-shadow: 2px 2px #111111;
+        border-radius: 8px;
+        -webkit-transition: transform 0.2s;
+        -webkit-transition: width 0.2s;
     }
 
+    .ImageCardColumn .ImageCardBackGround {
+        margin-top: -90%;
+        vertical-align: middle;
+        width: 90%;
+        z-index: -2;
+        left: 0%;
+        display:none;
+        box-shadow: 2px 2px #111111;
+        border-radius: 8px;
+        -webkit-transition: transform 0.2s;
+        -webkit-transition: width 0.2s;
+        opacity:0.5;
+    }
+
+
+.ImageCardColumn .ImageCardOverlay {
+    -webkit-transition: top 1s;
+}
+
+
+.ImageCardColumn:hover .ImageCardOverlay {
+    top: -70%;
+}
+
+    .ImageCardColumn .ImageCardLinkOverlay {
+        opacity: 0;
+        top: -80%;
+        -webkit-transition: top 1s;
+        -webkit-animation: ImageCardLinkAnimationReverse;
+        -webkit-animation-duration: 1s
+    }
+
+
+    .ImageCardColumn:hover .ImageCardLinkOverlay {
+        opacity: 1;
+        top: -70%;
+        -webkit-transition: top 1s;
+        -webkit-animation: ImageCardLinkAnimation ;
+        -webkit-animation-duration:1s
+    }
+
+
+    .ImageCardColumn:hover .ImageCard {
+        transform: scale(1.01);
+    }
+
+    .ImageCardColumn:hover .ImageCardBackGround {
+        display: block;
+        transform: scale(1.01);
+    }
+
+
+
+
+    .ImageCardColumn:hover .ImageCard {
+        -webkit-filter: sepia(50%);
+        filter: sepia(50%);
+    }
+
+
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .Responsivecolumn {
+@media screen and (max-width: 1800px) {
+    .ImageCardColumn {
+        flex: 30%;
+        max-width: 40%;
+    }
+
+    .ImageCardOverlay .CardOverlayText1 {
+        font-size: 40px;
+    }
+
+
+    .ImageCardOverlay .CardOverlayText2 {
+        font-size: 26px;
+    }
+
+    .ImageCardRow {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .ImageCardContainer h1 {
+        margin-left: 30%;
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+    .ImageCardColumn {
         flex: 50%;
         max-width: 50%;
     }
+
+    .ImageCardOverlay .CardOverlayText1 {
+        font-size: 200%;
+    }
+
+
+    .ImageCardOverlay .CardOverlayText2 {
+        font-size: 160%;
+    }
+
+    .ImageCardContainer h1 {
+        margin-left: 20%;
+    }
+
 }
 
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .Responsivecolumn {
+@media screen and (max-width: 800px) {
+    .ImageCardColumn {
         flex: 100%;
-        max-width: 100%;
+        max-width: 120%;
+        padding-left:30px;
     }
+
+    .ImageCardOverlay .CardOverlayText1 {
+        font-size: 200%;
+    }
+
+
+    .ImageCardOverlay .CardOverlayText2 {
+        font-size: 160%;
+    }
+
+    .ImageCardContainer h1 {
+        margin-left: 15%;
+        font-size: 30px;
+    }
+
 }
+
+
+@media screen and (max-width: 400px) {
+
+    .ImageCardRow {
+        margin-top: 160px;
+    }
+    .ImageCardColumn {
+        margin-top:40px;
+    }
+
+   .ImageCardColumn:hover .ImageCardOverlay {
+            top: -80%;
+        }
+
+    .ImageCardOverlay .CardOverlayText1 {
+        font-size: 140%;
+    }
+
+
+    .ImageCardOverlay .CardOverlayText2 {
+        font-size: 100%;
+    }
+
+    .ImageCardColumn .ImageCardLinkOverlay {
+        opacity: 0;
+        top: -100%;
+        -webkit-transition: opacity 1s;
+        -webkit-transition: top 1s;
+    }
+
+
+    .ImageCardColumn:hover .ImageCardLinkOverlay {
+        opacity: 1;
+        top: -80%;
+        -webkit-transition: opacity 1s;
+        -webkit-transition: top 1s;
+    }
+
+
+
+    .ImageCardLinkOverlay h6 {
+        font-size: 16px;
+        margin-top:14px;
+    }
+
+
+    .ImageCardContainer h1 {
+        font-size: 22px;
+        margin-left:12%;
+    }
+
+
+}
+
+
+

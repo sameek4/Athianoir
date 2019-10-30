@@ -78,21 +78,26 @@
         </div>
 
         <template id="FeatureProducts">
-            <div class="ImageCardDiv">
-                <div class="card">
-                    <img class="ImageCard" id="ThumbnailImage">
-                    <div class="ImageCardOverlay">
-                        <span class="title"></span>
-                    </div>
-                    <a href="#" style="display: block">
-                        <div class="ImageCardBackGround">
-                        </div>
-                    </a>
-                    <div class="ImageCardLinkOverlay">
+            <div class="ImageCardColumn">
+                <img class="ImageCard" id="ThumbnailImage">
+                <a id="ImageCardLink" href="#">
+                    <img class="ImageCardBackGround" src="Images/FeaturedOverlay.jpg">
+                </a>
+
+                <div class="ImageCardOverlay">
+                    <span class="title"></span>
+                </div>
+
+                <div class="ImageCardLinkOverlay">
+                    <a id="DownloadLink" href="#" target="_blank" style="text-decoration:none">
                         <h6>Get It</h6>
+                    </a>
+                    <a id="DocumentationLink" href="#"  style="text-decoration:none">
                         <h6>Documentation</h6>
+                    </a>
+                    <a id="DiscordLink" href="#" target="_blank" style="text-decoration:none">
                         <h6>Join Discord</h6>
-                    </div>
+                    </a>
                 </div>
             </div>
         </template>
@@ -100,7 +105,7 @@
 
         <div class="ImageCardContainer" style="padding-top:700px;">
             <h1>FEATURED PRODUCTS</h1>
-            <div class="row" id="FeatureProductsDiv">
+            <div class="ImageCardRow" id="FeatureProductsDiv">
             </div>
         </div>
 
